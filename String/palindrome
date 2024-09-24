@@ -1,0 +1,20 @@
+// Wap to check whether the string is palindrome or not
+
+
+package com.String.java;
+
+public class String2 {
+	public static void main(String[] args) {
+		String s ="madam";
+		String rev="";
+		for(int i=s.length()-1;i>=0;i--) {
+			rev=rev+s.charAt(i);
+			
+		}
+		if(s.equalsIgnoreCase(rev)) {
+			System.out.println("Palindrome");
+		}else {
+			System.out.println("Not a Palindrome");
+		}
+	}
+}
