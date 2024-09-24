@@ -1,0 +1,29 @@
+//3. WAP to convert the lowercase characters in string to uppercase characters without using inbuilt methods .
+//Input - java
+//Output - JAVA
+
+
+package com.String.java;
+
+public class StringHw3 {
+	public static void main(String[] args) {
+		
+		String input = "java";
+        String result = ""; 
+        
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i); 
+            
+           
+            if (ch >= 'a' && ch <= 'z') {
+                
+                result += (char) (ch - 32);
+            } else {
+                result += ch;
+            }
+        }
+        
+        System.out.println(result);
+		
+	}
+}
