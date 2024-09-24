@@ -1,0 +1,34 @@
+//4. WAP to find the toggle of the string where lowercase characters converted in uppercase and uppercase characters converted in lowercase.
+//Input - HeLlO WoRLD
+// Output - hElLo wOrld
+
+
+package com.String.java;
+
+public class StringHw4 {
+	public static void main(String[] args) {
+		String input = "HeLlO WoRLD";
+        String result = ""; 
+        
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i); 
+            
+           
+            if (ch >= 'a' && ch <= 'z') {
+               
+                result += (char) (ch - 32);
+            } 
+            
+            else if (ch >= 'A' && ch <= 'Z') {
+                
+                result += (char) (ch + 32);
+            } 
+           
+            else {
+                result += ch;
+            }
+        }
+        
+        System.out.println(result);
+	}
+}
