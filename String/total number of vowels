@@ -1,0 +1,21 @@
+//Wap to find the total number of vowels present in the string
+
+package com.String.java;
+
+public class String3 {
+	public static void main(String[] args) {
+		String str= "Education";
+		String s=str.toLowerCase();
+		int count=0;
+		for(int i=s.length()-1;i>=0;i--) {
+			char ch = s.charAt(i);
+			if(ch=='a'|| ch=='e' || ch=='i'||ch=='o'||ch=='u') {
+				count++;
+			}
+			
+		}
+		System.out.println(count);
+		
+	}
+
+}
