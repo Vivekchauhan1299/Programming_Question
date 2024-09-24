@@ -1,0 +1,81 @@
+// wap to check whether the string is pangram or not
+
+
+//package com.String.java;
+//import java.util.Arrays;
+
+//import java.lang.reflect.Array;
+
+//public class stringP10 {
+//	public static void main(String[] args) {
+//		String s1 ="The quick brown fox jumps over the lazy dog".replace(" ","").toLowerCase();
+//
+//		String s2  =" abcdefghijklmnopqrstuvwxyz".replace(" " , "");
+//
+//			if(s1.length()==s2.length())
+//			{ 
+//				char[] ch1 = s1.toCharArray();
+//				char[] ch2 = s2.toCharArray();
+//
+//				Arrays.sort(ch1);
+//				Arrays.sort(ch2);
+//
+//				for(int i :ch2)
+//				{
+//					if (s1.indexOf(letter) == -1) {  // If any letter from 'a' to 'z' is not found in s1
+//                isPangram = false;
+//                break;
+//
+//
+//				}
+//				if(isPangram){
+//					System.out.println("it is pangram ");
+//			}else
+//				
+//			{
+//				System.out.println("Not an pangram ");
+//			}
+//			   
+//			}
+//			else
+//			{
+//				System.out.println(" length does not match ,not a  pangram");
+//			}
+//	}
+//		
+//	}
+
+package com.String.java;
+import java.util.Arrays;
+
+public class stringP10 {
+    public static void main(String[] args) {
+        String s1 = "The quick brown fox jumps over the lazy dog".replace(" ", "").toLowerCase(); // Removing spaces and converting to lowercase
+
+        // The alphabet string only needs to contain 'a' to 'z' in lowercase for the check
+        String s2 = "abcdefghijklmnopqrstuvwxyz";
+
+        // Convert strings to character arrays
+        char[] ch1 = s1.toCharArray();
+        char[] ch2 = s2.toCharArray();
+
+        // Sort the arrays (although not needed for a pangram check)
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+
+        // Check if s1 contains all letters from 'a' to 'z'
+        boolean isPangram = true;
+        for (char letter : ch2) {
+            if (s1.indexOf(letter) == -1) {  // If any letter from 'a' to 'z' is not found in s1
+                isPangram = false;
+                break;
+            }
+        }
+
+        if (isPangram) {
+            System.out.println("It is a pangram.");
+        } else {
+            System.out.println("Not a pangram.");
+        }
+    }
+}
