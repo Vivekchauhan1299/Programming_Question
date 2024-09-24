@@ -1,0 +1,24 @@
+// input -  MU1M2B3A4I
+
+// OUTPUT- 6MUMBAI10
+
+package com.String.java;
+
+public class stringP13 {
+	public static void main(String[] args) {
+		String s1 = "MU1M2B3A4I".toUpperCase();
+		String res = "";
+		int sum=0;
+		for(int i=0;i<s1.length();i++) {
+			char ch = s1.charAt(i);
+			if(ch>='A' && ch<='Z') {
+				res = res+ch;
+			}else {
+				sum = sum+(ch-'0');
+			}
+		}
+		System.out.println(res.length() + res +sum);
+	
+}
+	
+}
