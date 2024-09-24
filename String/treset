@@ -1,0 +1,28 @@
+package com.String.java;
+
+import java.util.TreeSet;
+
+public class stringP12 {
+	public static void main(String[] args) {
+		String s = "the five boxing wizards jump quickly".toLowerCase();
+		TreeSet<Character>alpha = new TreeSet<>();
+		for(int i =0;i<s.length();i++) {
+			char ch = s.charAt(i);
+			if(ch>='a' && ch<='z') {
+				alpha.add(ch);
+				
+			}
+		}
+		
+		if(alpha.size()==26) {
+			System.out.println("pangram");
+		}
+		else {
+			System.out.println("not a pangram");
+		}
+		
+		
+		
+	}
+
+}
